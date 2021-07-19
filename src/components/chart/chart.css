@@ -1,0 +1,56 @@
+.app{
+    height: 100vh;
+    width: 100vw;
+    background: #0c1445;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.chart{
+    background:	#4c408e;
+    border-radius: 20px;
+    width: 450px;
+    height: 310px;
+}
+
+.chart > svg {
+    border-radius: 20px;
+}
+
+.tick{
+    font-size: 14px;
+    letter-spacing: 0;
+    fill: #FFFFFF;
+    border-radius: 10px;
+}
+
+.line{
+    stroke: rgba(255, 255, 255, .5);
+}
+
+/* CONTROL PANEL STYLES */
+.buttons-wrapper{
+    display: flex;
+}
+.buttons{
+    display: flex;
+    margin: 0 10px;
+}
+
+.buttons > button{
+    background-color: #4c408e; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+}
+
+.buttons > p {
+    color: #FFFFFF;
+    padding: 0 20px;
+}

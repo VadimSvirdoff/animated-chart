@@ -1,0 +1,50 @@
+.point{
+    transition: all 2s ease-out;
+}
+
+.point-label{
+    transform-origin: center;
+    transform-box: fill-box;
+    height: 40px;
+}
+
+.rotate{
+    transform: rotate(45deg);
+}
+
+.point-text{
+    fill: #FFFFFF;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.point-final-text{
+    fill: #FC5A5A;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.pauseWiggle{
+    animation-play-state: paused;
+}
+
+.isStop{
+    animation-name: movePoint;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-play-state: running !important;
+    animation-fill-mode: forwards;
+    
+
+}
+
+  
+@keyframes movePoint {
+    0%   { 
+        transform: translate(0,0) rotate(15deg);
+    }
+    100% { 
+        transform: translate(350%, 460%) rotate(60deg);
+    }
+  }
+
