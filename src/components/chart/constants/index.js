@@ -10,13 +10,17 @@ import {
     THIRD_TICK_POSITION,
     FOURTH_TICK_POSITION,
     FINAL_TICK_VALUE,
+} from './linePositions';
+
+import {
     START_POINT_X,
     FINISH_POINT_X,
     START_POINT_Y,
     MIDDLE_POINT_Y,
     FINISH_SCREEN_X,
     FINISH_SCREEN_Y,
-} from './positions';
+} from './pointPositions';
+
 
 import {
     FIRST_POINT_STAGE,
