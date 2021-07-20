@@ -16,20 +16,22 @@ import {
     MIDDLE_POINT_Y,
     FINISH_SCREEN_X,
     FINISH_SCREEN_Y,
-} from './positions'
+} from './positions';
+
 import {
     FIRST_POINT_STAGE,
     SECOND_POINT_STAGE,
     FINAL_SCREEN_STAGE,
-    POINT_INTERVAL_FINAL_VALUE
-} from "./stages"
+} from "./stages";
 
 import {
     LINE_INTERVAL_START,
     LINE_INTERVAL_PAUSE,
-} from './lineInterval'
+} from './lineInterval';
 
-
+import {
+    POINT_INTERVAL_FINAL_VALUE
+} from './pointValues';
 
 export {
     BOTTOM_TO_TOP,
