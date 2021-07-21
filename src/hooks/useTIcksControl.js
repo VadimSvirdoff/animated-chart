@@ -72,6 +72,5 @@ export const useTicksControl = ({ multiplier }) => {
 
     }, [multiplier]);
 
-
     return { ticks, linearCoef }
 }
