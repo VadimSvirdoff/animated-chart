@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import Chart from '../chart/Chart';
+import Chart from '../chart';
 import { useMockInterval } from '../../hooks/useMockInterval';
 import rocket from '../../assets/icons/rocket.png'
+import "./app.css"
 
 const App = () => {
     const [isStartStage, setisStartStage] = useState(false);
@@ -27,7 +28,9 @@ const App = () => {
 
     return (
         <div className='app'>
-            <Chart multiplier={multiplier} isFinalStage={!isStartStage} pointIcon={rocket}/>
+            <div className='chart-wrapper'>
+                <Chart multiplier={multiplier} isFinalStage={!isStartStage} pointIcon={rocket} />
+            </div>
             <div className='buttons-wrapper'>
                 <div className='buttons'>
                     <button onClick={startStage}>START STAGE</button>

@@ -1,0 +1,10 @@
+.chart-wrapper{
+    background:	#4c408e;
+    border-radius: 20px;
+    width: 450px;
+    height: 310px;
+}
+
+.chart-wrapper > svg {
+    border-radius: 20px;
+}

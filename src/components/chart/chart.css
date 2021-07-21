@@ -7,16 +7,6 @@
     align-items: center;
     flex-direction: column;
 }
-.chart{
-    background:	#4c408e;
-    border-radius: 20px;
-    width: 450px;
-    height: 310px;
-}
-
-.chart > svg {
-    border-radius: 20px;
-}
 
 .tick{
     font-size: 14px;
