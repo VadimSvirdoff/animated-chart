@@ -4,7 +4,7 @@ import { stages } from 'src/services/stages';
 import { useEffect, useState } from 'react'
 import { POINT_INTERVAL_FINAL_VALUE } from 'src/components/chart/constants';
 
-const INITIAL_TICK_VALUE = 4;
+const INITIAL_TICK_VALUE = 5;
 const FIRST_TICK_VALUE = 4;
 const SECOND_TICK_VALUE = 3;
 const THIRD_TICK_VALUE = 2;
@@ -39,7 +39,7 @@ export const useTicksControl = ({ multiplier }) => {
         return isInitialTicks
             ? initialTicks
             : {
-                initialTick: allStages[index + 2],
+                initialTick: allStages[index + 3],
                 firstTick: allStages[index + 2],
                 secondTick: allStages[index + 1],
                 thirdTick: allStages[index],

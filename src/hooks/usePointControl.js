@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import {
     controlPointX,
     controlPointY,
-} from '../utils/controlPoint';
+} from '../services/controlPoint';
 import {
     START_POINT_X,
     FINISH_POINT_X,
@@ -15,8 +15,8 @@ import {
     FINAL_SCREEN_STAGE,
     POINT_INTERVAL_FINAL_VALUE
 } from '../components/chart/constants';
-import { roundPoint } from '../utils/round';
-import { convertToPercents } from 'src/utils/formatString';
+import { convertToPercents } from 'src/utils';
+import { formatLabel } from 'src/services/formatLabel';
 
 export const usePointControl = ({ multiplier }) => {
     const [stage, setStage] = useState('');
@@ -52,7 +52,7 @@ export const usePointControl = ({ multiplier }) => {
                         pointIntervalFinalValue: POINT_INTERVAL_FINAL_VALUE,
                         multiplier
                     }),
-                    value: roundPoint(multiplier)
+                    value: formatLabel(multiplier)
                 }
             case SECOND_POINT_STAGE:
                 return {
@@ -67,13 +67,13 @@ export const usePointControl = ({ multiplier }) => {
                         pointIntervalFinalValue: POINT_INTERVAL_FINAL_VALUE,
                         multiplier: POINT_INTERVAL_FINAL_VALUE
                     }),
-                    value: roundPoint(multiplier)
+                    value: formatLabel(multiplier)
                 }
             case FINAL_SCREEN_STAGE:
                 return {
                     x: convertToPercents(FINISH_SCREEN_X),
                     y: convertToPercents(FINISH_SCREEN_Y),
-                    value: roundPoint(multiplier)
+                    value: formatLabel(multiplier)
                 }
             default:
                 return {

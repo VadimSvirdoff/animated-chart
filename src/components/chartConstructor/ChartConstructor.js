@@ -8,9 +8,9 @@ import {
     TOP_TO_BOTTOM,
     BOTTOM_TO_TOP
 } from 'src/components/chart/constants';
-import ChatPiece  from 'src/components/chartPieces';
-import { controlPosition } from 'src/utils/controlPosition';
-import { formatLabel } from 'src/utils/formatString';
+import ChatPiece from 'src/components/chartPieces';
+import { controlLabel, controlPosition } from 'src/services';
+
 
 const selectPosition = ({
     type,
@@ -24,15 +24,27 @@ const selectPosition = ({
 }) => {
     switch (type) {
         case INITIAL_POSITION:
-            return <ChatPiece position={position} tick={initialTick} hiddenArea={TOP_TO_BOTTOM}/>
+            return <ChatPiece
+                position={position}
+                tick={controlLabel({ currentTickValue: firstTick, nextTickValue: initialTick, linearCoef })}
+                hiddenArea={TOP_TO_BOTTOM} />
         case FIRST_POSITION:
-            return <ChatPiece position={controlPosition(position, linearCoef)} tick={formatLabel(firstTick)} />
+            return <ChatPiece
+                position={controlPosition({ position, linearCoef })}
+                tick={firstTick} />
         case SECOND_POSITION:
-            return <ChatPiece position={controlPosition(position, linearCoef)} tick={formatLabel(secondTick)} />
+            return <ChatPiece
+                position={controlPosition({ position, linearCoef })}
+                tick={secondTick} />
         case THIRD_POSITION:
-            return <ChatPiece position={controlPosition(position, linearCoef)} tick={formatLabel(thirdTick)} />
+            return <ChatPiece
+                position={controlPosition({ position, linearCoef })}
+                tick={thirdTick} />
         case FINAL_POSITION:
-            return <ChatPiece position={position} tick={finalTick} hiddenArea={BOTTOM_TO_TOP}/>
+            return <ChatPiece
+                position={position}
+                tick={finalTick}
+                hiddenArea={BOTTOM_TO_TOP} />
     }
 }
 

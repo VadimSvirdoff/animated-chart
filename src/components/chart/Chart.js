@@ -1,6 +1,5 @@
 import { useTicksControl } from '../../hooks/useTIcksControl';
 import './chart.css';
-import { controlLabel, formatLabel } from '../../utils/controlLabel';
 import Point from '../point';
 import { useEffect, useRef } from 'react';
 import { usePointControl } from '../../hooks/usePointControl';
