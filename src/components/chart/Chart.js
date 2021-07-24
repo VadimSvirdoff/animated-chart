@@ -10,10 +10,12 @@ import { FINAL_TICK_VALUE } from 'src/components/chart/constants';
 const Chart = ({ multiplier, isFinalStage, pointIcon }) => {
     const stagesRef = useRef();
 
-    const { point, stage: {
-        isFinalScreenStage,
-        setFinalScreenStage
-    },
+    const {
+        point,
+        stage: {
+            isFinalScreenStage,
+            setFinalScreenStage
+        },
     } = usePointControl({ multiplier });
 
     const {
