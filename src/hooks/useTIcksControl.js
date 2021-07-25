@@ -1,6 +1,6 @@
 // import { useEffect, useState} from 'react'
 import { isEqual } from 'lodash';
-import { stages } from 'src/services/stages';
+import { createStages } from 'src/services';
 import { useEffect, useState } from 'react'
 import { POINT_INTERVAL_FINAL_VALUE } from 'src/components/chart/constants';
 
@@ -19,7 +19,7 @@ const initialTicks = {
 
 export const useTicksControl = ({ multiplier }) => {
     const [ticks, setTicks] = useState(initialTicks);
-    const [allStages] = useState(() => stages());
+    const [allStages] = useState(() => createStages());
     const [linearCoef, setlinearCoef] = useState(0);
 
     const isTicksEqual = (stage) => (isEqual(ticks, stage));
@@ -46,7 +46,7 @@ export const useTicksControl = ({ multiplier }) => {
             }
     }
 
-    const controlTick = (index) => {
+    const selectTick = (index) => {
         const currnetTick = selectTicks(index);
         if (!isTicksEqual(currnetTick)) {
             setTicks(currnetTick)
@@ -68,7 +68,7 @@ export const useTicksControl = ({ multiplier }) => {
         if(multiplier > POINT_INTERVAL_FINAL_VALUE){
             controlLinearCoef(index);  
         }
-        controlTick(index);
+        selectTick(index);
 
     }, [multiplier]);
 

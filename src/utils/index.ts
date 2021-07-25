@@ -1,13 +1,13 @@
 
 import {
-    tickFormat,
+    valueFormat,
     convertToPercents
 } from './formatString';
 import { round } from './round';
 
 
 export {
-    tickFormat,
+    valueFormat,
     convertToPercents,
     round,
 }

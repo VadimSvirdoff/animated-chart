@@ -1,4 +1,4 @@
-export const stages = () => {
+export const createStages = () => {
     let stageItem = 1;
     const stagesList = [stageItem];
     let isContinue = true;

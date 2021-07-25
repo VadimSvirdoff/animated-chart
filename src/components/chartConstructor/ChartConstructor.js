@@ -9,7 +9,7 @@ import {
     BOTTOM_TO_TOP
 } from 'src/components/chart/constants';
 import ChatPiece from 'src/components/chartPieces';
-import { controlLabel, controlPosition } from 'src/services';
+import { controlTickValue, controlLineTickPosition } from 'src/services';
 
 
 const selectPosition = ({
@@ -26,19 +26,19 @@ const selectPosition = ({
         case INITIAL_POSITION_TYPE:
             return <ChatPiece
                 position={position}
-                tick={controlLabel({ currentTickValue: firstTick, nextTickValue: initialTick, linearCoef })}
+                tick={controlTickValue({ currentTickValue: firstTick, nextTickValue: initialTick, linearCoef })}
                 hiddenArea={TOP_TO_BOTTOM} />
         case FIRST_POSITION_TYPE:
             return <ChatPiece
-                position={controlPosition({ position, linearCoef })}
+                position={controlLineTickPosition({ position, linearCoef })}
                 tick={firstTick} />
         case SECOND_POSITION_TYPE:
             return <ChatPiece
-                position={controlPosition({ position, linearCoef })}
+                position={controlLineTickPosition({ position, linearCoef })}
                 tick={secondTick} />
         case THIRD_POSITION_TYPE:
             return <ChatPiece
-                position={controlPosition({ position, linearCoef })}
+                position={controlLineTickPosition({ position, linearCoef })}
                 tick={thirdTick} />
         case FINAL_POSITION_TYPE:
             return <ChatPiece

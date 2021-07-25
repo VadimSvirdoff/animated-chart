@@ -1,17 +1,19 @@
 import {
-    controlLabel
-} from './controlLabel';
+    controlTickValue
+} from './tickService';
 import {
-    controlPointX,
-    controlPointY
-} from './controlPoint';
-import {
-    controlPosition
-} from './controlPosition';
-
-export {
-    controlLabel,
     controlPointX,
     controlPointY,
-    controlPosition
+    controlLineTickPosition
+} from './positionsService';
+import {
+    createStages
+} from './stagesService';
+
+export {
+    controlTickValue,
+    controlPointX,
+    controlPointY,
+    controlLineTickPosition,
+    createStages
 }

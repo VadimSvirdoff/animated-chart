@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import {
     controlPointX,
     controlPointY,
-} from '../services/controlPoint';
+} from '../services';
 import {
     START_POINT_X,
     FINISH_POINT_X,

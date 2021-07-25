@@ -1,8 +1,8 @@
 import {
-    tickFormat,
+    valueFormat,
     round
 } from "src/utils";
 
 type FormatLabel = (tick: number) => string;
 
-export const formatLabel: FormatLabel = (tick) => tickFormat(round(tick));
+export const formatLabel: FormatLabel = (tick) => valueFormat(round(tick));
