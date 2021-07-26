@@ -34,12 +34,12 @@ import {
     SECOND_POSITION_TYPE,
     THIRD_POSITION_TYPE,
     FINAL_POSITION_TYPE
-} from './point/positionType'
+} from './position/positionType'
 
 import {
     POSITIONS,
     DIFF,
-} from './point/positions';
+} from './position/positions';
 
 import {
     FINAL_TICK_VALUE,

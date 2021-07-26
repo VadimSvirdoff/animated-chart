@@ -1,5 +1,8 @@
 import {
-    controlTickValue
+    controlTickValue,
+    getCurrentStageIndex,
+    isTicksEqual,
+    selectTicks
 } from './tickService';
 import {
     controlPointX,
@@ -17,7 +20,9 @@ import {
 import {
     round
 } from './numberService'
-
+import {
+    controlLinearCoef
+} from './linearCoefService'
 
 export {
     controlTickValue,
@@ -28,5 +33,9 @@ export {
     formatLabel,
     valueFormat,
     convertToPercents,
-    round
+    round,
+    getCurrentStageIndex,
+    isTicksEqual,
+    selectTicks,
+    controlLinearCoef
 }
