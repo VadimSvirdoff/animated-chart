@@ -4,15 +4,6 @@ import {
 } from './hiddenArea';
 
 import {
-    DIFF,
-    INITIAL_POSITION,
-    SECOND_POSITION,
-    THIRD_POSITION,
-    FINAL_POSITION,
-    FINAL_TICK_VALUE,
-} from './linePositions';
-
-import {
     START_POINT_X,
     FINISH_POINT_X,
     START_POINT_Y,
@@ -46,8 +37,13 @@ import {
 } from './positionType'
 
 import {
-    POSITIONS 
+    POSITIONS,
+    DIFF,
 } from './positions';
+
+import {
+    FINAL_TICK_VALUE,
+} from './tick'
 
 
 export {
@@ -72,9 +68,5 @@ export {
     SECOND_POSITION_TYPE,
     THIRD_POSITION_TYPE,
     FINAL_POSITION_TYPE,
-    INITIAL_POSITION,
-    SECOND_POSITION,
-    THIRD_POSITION,
-    FINAL_POSITION,
     POSITIONS,
 };
