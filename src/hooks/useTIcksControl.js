@@ -1,24 +1,10 @@
-// import { useEffect, useState} from 'react'
 import { isEqual } from 'lodash';
 import { createStages } from 'src/services';
 import { useEffect, useState } from 'react'
-import { POINT_INTERVAL_FINAL_VALUE } from 'src/constants';
-
-const INITIAL_TICK_VALUE = 5;
-const FIRST_TICK_VALUE = 4;
-const SECOND_TICK_VALUE = 3;
-const THIRD_TICK_VALUE = 2;
-
-const initialTicks = {
-    initialTick: INITIAL_TICK_VALUE,
-    firstTick: FIRST_TICK_VALUE,
-    secondTick: SECOND_TICK_VALUE,
-    thirdTick: THIRD_TICK_VALUE
-}
-
+import {INITIAL_TICKS, POINT_INTERVAL_FINAL_VALUE} from 'src/constants';
 
 export const useTicksControl = ({ multiplier }) => {
-    const [ticks, setTicks] = useState(initialTicks);
+    const [ticks, setTicks] = useState(INITIAL_TICKS);
     const [allStages] = useState(() => createStages());
     const [linearCoef, setlinearCoef] = useState(0);
 
@@ -37,7 +23,7 @@ export const useTicksControl = ({ multiplier }) => {
         const isInitialTicks = index === 0;
 
         return isInitialTicks
-            ? initialTicks
+            ? INITIAL_TICKS
             : {
                 initialTick: allStages[index + 3],
                 firstTick: allStages[index + 2],
@@ -57,7 +43,7 @@ export const useTicksControl = ({ multiplier }) => {
         const second = allStages[index + 1];
         const third = allStages[index + 2];
         const diff = third - second;
-        const currentDiff = ( diff - (third - multiplier - .5)) / diff;
+        const currentDiff = (diff - (third - multiplier - .5)) / diff;
         setlinearCoef(() => {
             return currentDiff
         })
@@ -65,8 +51,8 @@ export const useTicksControl = ({ multiplier }) => {
 
     useEffect(() => {
         const index = getIndex();
-        if(multiplier > POINT_INTERVAL_FINAL_VALUE){
-            controlLinearCoef(index);  
+        if (multiplier > POINT_INTERVAL_FINAL_VALUE) {
+            controlLinearCoef(index);
         }
         selectTick(index);
 

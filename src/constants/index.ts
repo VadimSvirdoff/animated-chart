@@ -10,7 +10,7 @@ import {
     MIDDLE_POINT_Y,
     FINISH_SCREEN_X,
     FINISH_SCREEN_Y,
-} from './pointPositions';
+} from './point/pointPositions';
 
 
 import {
@@ -26,7 +26,7 @@ import {
 
 import {
     POINT_INTERVAL_FINAL_VALUE
-} from './pointValues';
+} from './point/pointValues';
 
 import {
     INITIAL_POSITION_TYPE,
@@ -34,16 +34,17 @@ import {
     SECOND_POSITION_TYPE,
     THIRD_POSITION_TYPE,
     FINAL_POSITION_TYPE
-} from './positionType'
+} from './point/positionType'
 
 import {
     POSITIONS,
     DIFF,
-} from './positions';
+} from './point/positions';
 
 import {
     FINAL_TICK_VALUE,
-} from './tick'
+    INITIAL_TICKS
+} from './tick/tickValues'
 
 
 export {
@@ -69,4 +70,5 @@ export {
     THIRD_POSITION_TYPE,
     FINAL_POSITION_TYPE,
     POSITIONS,
+    INITIAL_TICKS
 };
