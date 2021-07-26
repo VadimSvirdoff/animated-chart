@@ -45,6 +45,9 @@ import {
     FINAL_POSITION_TYPE
 } from './positionType'
 
+import {
+    POSITIONS 
+} from './positions';
 
 
 export {
@@ -73,4 +76,5 @@ export {
     SECOND_POSITION,
     THIRD_POSITION,
     FINAL_POSITION,
+    POSITIONS,
 };

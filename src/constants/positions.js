@@ -8,7 +8,7 @@ import {
     SECOND_POSITION_TYPE,
     THIRD_POSITION_TYPE,
     FINAL_POSITION_TYPE
-} from "src/components/chart/constants";
+} from "src/constants";
 
 export const POSITIONS = [
     {

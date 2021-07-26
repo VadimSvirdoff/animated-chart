@@ -2,7 +2,7 @@
 import { isEqual } from 'lodash';
 import { createStages } from 'src/services';
 import { useEffect, useState } from 'react'
-import { POINT_INTERVAL_FINAL_VALUE } from 'src/components/chart/constants';
+import { POINT_INTERVAL_FINAL_VALUE } from 'src/constants';
 
 const INITIAL_TICK_VALUE = 5;
 const FIRST_TICK_VALUE = 4;

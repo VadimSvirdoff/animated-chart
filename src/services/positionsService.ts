@@ -1,4 +1,4 @@
-import { DIFF } from "src/components/chart/constants";
+import { DIFF } from "src/constants";
 
 type ControlPosition = (arg: {
     position: number, 

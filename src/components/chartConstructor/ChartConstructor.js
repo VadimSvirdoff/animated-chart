@@ -1,4 +1,3 @@
-import { POSITIONS } from 'src/components/chart/constants/positions';
 import {
     INITIAL_POSITION_TYPE,
     FIRST_POSITION_TYPE,
@@ -6,8 +5,9 @@ import {
     THIRD_POSITION_TYPE,
     FINAL_POSITION_TYPE,
     TOP_TO_BOTTOM,
-    BOTTOM_TO_TOP
-} from 'src/components/chart/constants';
+    BOTTOM_TO_TOP,
+    POSITIONS
+} from 'src/constants';
 import ChatPiece from 'src/components/chartPieces';
 import { controlTickValue, controlLineTickPosition } from 'src/services';
 

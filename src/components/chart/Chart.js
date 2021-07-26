@@ -4,7 +4,7 @@ import Point from '../point';
 import { useEffect, useRef } from 'react';
 import { usePointControl } from '../../hooks/usePointControl';
 import ChartConstructor from '../chartConstructor';
-import { FINAL_TICK_VALUE } from 'src/components/chart/constants';
+import { FINAL_TICK_VALUE } from 'src/constants';
 
 const Chart = ({ multiplier, isFinalStage, pointIcon }) => {
     const stagesRef = useRef();

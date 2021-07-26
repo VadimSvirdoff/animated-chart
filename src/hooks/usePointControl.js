@@ -14,7 +14,7 @@ import {
     FINISH_SCREEN_X,
     FINAL_SCREEN_STAGE,
     POINT_INTERVAL_FINAL_VALUE
-} from '../components/chart/constants';
+} from '../constants';
 import { convertToPercents } from 'src/utils';
 import { formatLabel } from 'src/services/formatLabel';
 

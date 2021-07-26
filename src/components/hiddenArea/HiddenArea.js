@@ -1,4 +1,4 @@
-import { BOTTOM_TO_TOP, TOP_TO_BOTTOM } from 'src/components/chart/constants/hiddenArea'
+import { BOTTOM_TO_TOP, TOP_TO_BOTTOM } from 'src/constants'
 
 const selectDirection = (direction) => {
     switch (direction) {
