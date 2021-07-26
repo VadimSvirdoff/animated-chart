@@ -1,4 +1,4 @@
-import { formatLabel } from 'src/services/formatLabel';
+import { formatLabel } from 'src/services';
 
 type ControlTick = (args: {
     currentTickValue: number,

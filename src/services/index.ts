@@ -9,11 +9,24 @@ import {
 import {
     createStages
 } from './stagesService';
+import {
+    formatLabel,
+    valueFormat,
+    convertToPercents
+} from './stringService'
+import {
+    round
+} from './numberService'
+
 
 export {
     controlTickValue,
     controlPointX,
     controlPointY,
     controlLineTickPosition,
-    createStages
+    createStages,
+    formatLabel,
+    valueFormat,
+    convertToPercents,
+    round
 }

@@ -15,8 +15,7 @@ import {
     FINAL_SCREEN_STAGE,
     POINT_INTERVAL_FINAL_VALUE
 } from '../constants';
-import { convertToPercents } from 'src/utils';
-import { formatLabel } from 'src/services/formatLabel';
+import { formatLabel, convertToPercents } from 'src/services';
 
 export const usePointControl = ({ multiplier }) => {
     const [stage, setStage] = useState('');
