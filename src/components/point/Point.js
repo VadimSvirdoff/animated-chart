@@ -1,4 +1,5 @@
 
+import { convertToPercents } from 'src/services';
 import './point.css';
 
 const Point = ({
@@ -12,7 +13,7 @@ const Point = ({
         ? (
             isFinalScreenStage
                 ? (
-                    <text x={x} y={y} className='point-final-text'>{value}</text>
+                    <text x={convertToPercents(x)} y={convertToPercents(y)} className='point-final-text'>{value}</text>
                 )
                 : (
                     <>

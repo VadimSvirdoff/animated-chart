@@ -23,6 +23,9 @@ import {
 import {
     controlLinearCoef
 } from './linearCoefService'
+import {
+    selectPointPhases
+} from './pointService'
 
 export {
     controlTickValue,
@@ -37,5 +40,6 @@ export {
     getCurrentStageIndex,
     isTicksEqual,
     selectTicks,
-    controlLinearCoef
+    controlLinearCoef,
+    selectPointPhases
 }

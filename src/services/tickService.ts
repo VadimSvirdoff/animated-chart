@@ -7,7 +7,7 @@ type ControlTick = (args: {
     linearCoef: number
 }) => string;
 
-type Stage = number;
+export type Stage = number;
 
 export type Tick = {
     initialTick: number,

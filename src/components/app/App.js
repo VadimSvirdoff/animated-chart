@@ -5,21 +5,21 @@ import rocket from '../../assets/icons/rocket.png'
 import "./app.css"
 
 const App = () => {
-    const [isStartStage, setisStartStage] = useState(false);
+    const [isStartPhase, setisStartPhase] = useState(false);
     const [multiplier, initializeMockInterval, clearLinearMockInterval] = useMockInterval();
 
     useEffect(() => {
-        if (isStartStage) {
+        if (isStartPhase) {
             initializeMockInterval()
         }
         return () => {
             clearLinearMockInterval()
         }
-    }, [isStartStage])
+    }, [isStartPhase])
 
-    const startStage = () => setisStartStage(true)
-    const finishStage = () => {
-        setisStartStage(() => {
+    const startPhase = () => setisStartPhase(true)
+    const finishPhase = () => {
+        setisStartPhase(() => {
             clearLinearMockInterval();
             return false
         });
@@ -29,12 +29,12 @@ const App = () => {
     return (
         <div className='app'>
             <div className='chart-wrapper'>
-                <Chart multiplier={multiplier} isFinalStage={!isStartStage} pointIcon={rocket} />
+                <Chart multiplier={multiplier} isFinalPhase={!isStartPhase} pointIcon={rocket} />
             </div>
             <div className='buttons-wrapper'>
                 <div className='buttons'>
-                    <button onClick={startStage}>START STAGE</button>
-                    <button onClick={finishStage}>FINISH STAGE</button>
+                    <button onClick={startPhase}>START PHASE</button>
+                    <button onClick={finishPhase}>FINISH PHASE</button>
                 </div>
             </div>
         </div>

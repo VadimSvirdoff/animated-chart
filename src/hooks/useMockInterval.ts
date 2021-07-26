@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 
 
 export const useMockInterval = () => {
-    const interval = useRef();
+    const interval = useRef<any>();
     const [multiplier, setmultiplier] = useState(0);
 
     const finalMultiplier = 1000;
@@ -18,7 +18,7 @@ export const useMockInterval = () => {
     }
 
     const initializeInterval = () => {
-        interval.current = setInterval(async () => {
+        interval.current  = setInterval(async () => {
             changeMultiplier()
         }, time)
 
