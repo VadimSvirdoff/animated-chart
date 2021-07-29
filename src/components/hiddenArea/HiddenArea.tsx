@@ -1,6 +1,11 @@
 import { BOTTOM_TO_TOP, TOP_TO_BOTTOM } from 'src/constants'
 
-const selectDirection = (direction) => {
+type SelectDirection = (direction: string) => ({y1: number, y2: number, x: number, y: number});
+type SelectHeight = (direction: string) => number;
+type SelectColor = (direction: string) => string;
+type  HiddenArea = (arg: {id: string}) => JSX.Element | null;
+
+const selectDirection: SelectDirection = (direction) => {
     switch (direction) {
         case BOTTOM_TO_TOP:
             return { y1: 1, y2: 0, x: 0, y: 201 }
@@ -12,7 +17,7 @@ const selectDirection = (direction) => {
 
 }
 
-const selectHeight = (direction) => {
+const selectHeight: SelectHeight = (direction) => {
     switch (direction) {
         case BOTTOM_TO_TOP:
             return 90;
@@ -23,7 +28,7 @@ const selectHeight = (direction) => {
     }
 }
 
-const selectColor = (direction) => {
+const selectColor: SelectColor = (direction) => {
     switch (direction) {
         case BOTTOM_TO_TOP:
             return '#5c54a4';
@@ -34,7 +39,7 @@ const selectColor = (direction) => {
     }
 }
 
-export const HiddenArea = ({ id }) => {
+export const HiddenArea: HiddenArea = ({ id }) => {
 
     const { y1, y2, x, y } = selectDirection(id);
     const height = selectHeight(id)
