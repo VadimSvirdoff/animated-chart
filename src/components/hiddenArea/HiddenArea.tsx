@@ -39,7 +39,7 @@ const selectColor: SelectColor = (direction) => {
     }
 }
 
-export const HiddenArea: HiddenArea = ({ id }) => {
+const HiddenArea: HiddenArea = ({ id }) => {
 
     const { y1, y2, x, y } = selectDirection(id);
     const height = selectHeight(id)
@@ -61,3 +61,4 @@ export const HiddenArea: HiddenArea = ({ id }) => {
         : null
 }
 
+export default HiddenArea;

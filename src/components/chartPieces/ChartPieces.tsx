@@ -1,6 +1,8 @@
-import { HiddenArea } from "../hiddenArea/HiddenArea"
+import HiddenArea from "../hiddenArea"
 
-const ChatPiece = ({ tick, position, hiddenArea }) => (
+type ChatPiece = (arg: {tick: string, position: number, hiddenArea: string  }) => JSX.Element;
+
+const ChatPiece: ChatPiece = ({ tick, position, hiddenArea }) => (
     <>
         <HiddenArea id={hiddenArea} />
         <g transform={`translate(29, ${position})`}>
