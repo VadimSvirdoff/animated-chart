@@ -11,8 +11,28 @@ import {
 import ChatPiece from 'src/components/chartPieces';
 import { controlTickValue, controlLineTickPosition } from 'src/services';
 
+type ChartConstructor = (arg: {
+    initialTick: number,
+    firstTick: number,
+    secondTick: number,
+    thirdTick: number,
+    finalTick: number,
+    linearCoef: number
+})=> (JSX.Element)[];
 
-const selectPosition = ({
+type selectPosition = (arg: {
+    type: string,
+    position: number,
+    initialTick: number,
+    firstTick: number,
+    secondTick: number,
+    thirdTick: number,
+    finalTick: number,
+    linearCoef: number
+}) => JSX.Element;
+
+
+const selectPosition: selectPosition = ({
     type,
     position,
     initialTick,
@@ -31,24 +51,26 @@ const selectPosition = ({
         case FIRST_POSITION_TYPE:
             return <ChatPiece
                 position={controlLineTickPosition({ position, linearCoef })}
-                tick={firstTick} />
+                tick={firstTick.toString()} />
         case SECOND_POSITION_TYPE:
             return <ChatPiece
                 position={controlLineTickPosition({ position, linearCoef })}
-                tick={secondTick} />
+                tick={secondTick.toString()} />
         case THIRD_POSITION_TYPE:
             return <ChatPiece
                 position={controlLineTickPosition({ position, linearCoef })}
-                tick={thirdTick} />
+                tick={thirdTick.toString()} />
         case FINAL_POSITION_TYPE:
             return <ChatPiece
                 position={position}
-                tick={finalTick}
+                tick={finalTick.toString()}
                 hiddenArea={BOTTOM_TO_TOP} />
+        default:
+            return <></>
     }
 }
 
-const ChartConstructor = ({
+const ChartConstructor: ChartConstructor = ({
     initialTick,
     firstTick,
     secondTick,

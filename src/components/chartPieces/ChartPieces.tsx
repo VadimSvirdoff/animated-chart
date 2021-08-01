@@ -1,10 +1,14 @@
 import HiddenArea from "../hiddenArea"
 
-type ChatPiece = (arg: {tick: string, position: number, hiddenArea: string  }) => JSX.Element;
+type ChatPiece = (arg: { tick: string, position: number, hiddenArea?: string }) => JSX.Element;
 
 const ChatPiece: ChatPiece = ({ tick, position, hiddenArea }) => (
     <>
-        <HiddenArea id={hiddenArea} />
+        {
+            typeof hiddenArea === "string"
+                ? <HiddenArea id={hiddenArea} />
+                : null
+        }
         <g transform={`translate(29, ${position})`}>
             <text className="tick" x={0} y={-10}>
                 {tick}
