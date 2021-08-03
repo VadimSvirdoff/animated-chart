@@ -18,7 +18,7 @@ type ChartConstructor = (arg: {
     thirdTick: number,
     finalTick: number,
     linearCoef: number
-})=> (JSX.Element)[];
+}) => JSX.Element;
 
 type selectPosition = (arg: {
     type: string,
@@ -77,20 +77,22 @@ const ChartConstructor: ChartConstructor = ({
     thirdTick,
     finalTick,
     linearCoef
-}) => (
-    POSITIONS
-        .map(({ position, type }) => (
-            selectPosition({
-                position,
-                type,
-                initialTick,
-                firstTick,
-                secondTick,
-                thirdTick,
-                finalTick,
-                linearCoef
-            })
-        ))
-)
+}) => <>
+        {
+            POSITIONS
+                .map(({ position, type }) => (
+                    selectPosition({
+                        position,
+                        type,
+                        initialTick,
+                        firstTick,
+                        secondTick,
+                        thirdTick,
+                        finalTick,
+                        linearCoef
+                    })
+                ))
+        }
+    </>
 
 export default ChartConstructor

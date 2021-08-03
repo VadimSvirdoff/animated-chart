@@ -1,12 +1,14 @@
 import { useTicksControl } from '../../hooks/useTIcksControl';
 import './chart.css';
 import Point from '../point';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { usePointControl } from '../../hooks/usePointControl';
 import ChartConstructor from '../chartConstructor';
 import { FINAL_TICK_VALUE } from 'src/constants';
 
-const Chart = ({ multiplier, isFinalPhase, pointIcon }) => {
+type Chart = (props: {multiplier: number, isFinalPhase: boolean, pointIcon: string}) => JSX.Element;
+
+const Chart: Chart = ({ multiplier, isFinalPhase, pointIcon }) => {
     const {
         point,
         phase: {
@@ -49,7 +51,6 @@ const Chart = ({ multiplier, isFinalPhase, pointIcon }) => {
                 value={point.value}
                 pointIcon={pointIcon}
                 isFinalScreenPhase={isFinalScreenPhase()}
-                isStop={isFinalPhase}
                 multiplier={multiplier}
             />
         </svg>

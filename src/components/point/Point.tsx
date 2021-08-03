@@ -7,7 +7,7 @@ type IPoint = (arg: {
     x: number,
     y: number,
     value: string,
-    isFinalScreenStage: boolean,
+    isFinalScreenPhase: boolean,
     pointIcon: string,
     multiplier: number
 
@@ -17,13 +17,13 @@ const Point: IPoint = ({
     x,
     y,
     value,
-    isFinalScreenStage,
+    isFinalScreenPhase,
     pointIcon,
     multiplier
 }) => {
     return multiplier
         ? (
-            isFinalScreenStage
+            isFinalScreenPhase
                 ? (
                     <text x={convertToPercents(x)} y={convertToPercents(y)} className='point-final-text'>{value}</text>
                 )
